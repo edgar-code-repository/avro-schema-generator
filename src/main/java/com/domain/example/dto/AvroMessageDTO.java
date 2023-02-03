@@ -1,11 +1,14 @@
 package com.domain.example.dto;
 
+import org.apache.avro.reflect.Nullable;
+
 public class AvroMessageDTO {
 
     private Integer code;
 
     private String message;
 
+    @Nullable
     private String description;
 
     public Integer getCode() {
