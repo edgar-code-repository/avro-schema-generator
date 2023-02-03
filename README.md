@@ -36,6 +36,7 @@ Because I'm a lazy programmer and don't enjoy writing schemas!
     
         private String message;
     
+        @Nullable
         private String description;
     
         ... getters
@@ -73,7 +74,7 @@ Because I'm a lazy programmer and don't enjoy writing schemas!
       "fields" : [ 
             { "name" : "code", "type" : "int" }, 
             { "name" : "message", "type" : "string" }, 
-            { "name" : "description", "type" : "string" } 
+            { "name" : "description", "type" : [ "null", "string" ], "default" : null } 
       ]
     }
 ```
